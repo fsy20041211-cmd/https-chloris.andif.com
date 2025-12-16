@@ -11,11 +11,12 @@ body {
   font-family: "Georgia", serif;
   background-color: #f6f1e8;
   color: #5a5957;
+  scroll-behavior: smooth;
 }
 
 section {
   min-height: 100vh;
-  padding: 80px 40px;
+  padding: 80px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -23,18 +24,18 @@ section {
 }
 
 .cover {
-  flex-direction: column;
   text-align: center;
+  flex-direction: column;
 }
 
 .cover h1 {
-  font-size: 64px;
+  font-size: 68px;
   letter-spacing: 0.15em;
 }
 
 .cover p {
-  margin-top: 20px;
   font-size: 16px;
+  margin-top: 20px;
 }
 
 .full-image {
@@ -43,35 +44,43 @@ section {
 }
 
 .overlay-text {
-  background: rgba(246,241,232,0.9);
-  padding: 40px;
+  background: rgba(246,241,232,0.85);
+  padding: 60px;
   max-width: 420px;
+}
+
+.split {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
 }
 
 .box-frame {
   border: 1px solid #a3b59f;
-  padding: 60px;
+  padding: 80px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(163,181,159,0.25),
+      rgba(163,181,159,0.25) 2px,
+      transparent 2px,
+      transparent 18px
+    );
   max-width: 520px;
   text-align: center;
 }
 
 .notes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
   max-width: 900px;
-  width: 100%;
 }
 
 .notes h3 {
+  text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 footer {
@@ -83,6 +92,7 @@ footer {
 
 <body>
 
+<!-- 封面 -->
 <section class="cover">
   <h1>CHLORIS</h1>
   <p>
@@ -91,20 +101,40 @@ footer {
   </p>
 </section>
 
-<section class="full-image" style="background-image: url('perfume.jpg');">
+<!-- 香水瓶主视觉 -->
+<section class="full-image" style="background-image:url('perfume.jpg');">
   <div class="overlay-text">
     <p>
       On a quiet summer afternoon,<br>
       warm wind passes through citrus trees<br>
-      and old stone houses.<br><br>
-      Fresh lemon and bergamot recall sunlight.<br>
-      Green leaves, soft woods, and skin-warm air.<br><br>
-      Chloris is not a place,<br>
-      but the feeling of a summer that stays.
+      and old stone houses.
+
+      Inspired by Chloris, the nymph of new green in Greek mythology,
+      this fragrance captures the moment when spring slowly becomes summer.<br><br>
+
+      Fresh lemon and bergamot recall the sunlight of southern Italy.
+      Petitgrain and juniper evoke olive leaves and cool shadows.
+      Soft florals and woods linger like skin warmed by the Mediterranean sun.<br><br>
+
+      Chloris is not a place,
+      but the feeling of a summer that stays with you.
     </p>
   </div>
 </section>
 
+<!-- 情绪画面 -->
+<section class="full-image" style="background-image:url('mood.jpg');">
+  <div class="overlay-text">
+    <p>
+      Warm air, citrus trees,<br>
+      and the quiet rhythm of summer.<br><br>
+      Inspired by Chloris and the slow,
+      sun-drenched summers of the Mediterranean.
+    </p>
+  </div>
+</section>
+
+<!-- 产品信息 -->
 <section>
   <div class="box-frame">
     <h2>PRODUCT DETAILS</h2>
@@ -114,9 +144,15 @@ footer {
       Volume · 20ml<br>
       Gender · Unisex
     </p>
+
+    <p style="margin-top:40px;">
+      Inspired by Chloris,<br>
+      the goddess of flowers in ancient Greek mythology.
+    </p>
   </div>
 </section>
 
+<!-- 香调 -->
 <section>
   <div class="notes">
     <div>
@@ -129,30 +165,23 @@ footer {
     </div>
     <div>
       <h3>Base</h3>
-      <p>Damask Rose<br>Woods<br>Musk<br>Ambergris</p>
+      <p>Damask Rose<br>Cool Woods<br>Musk<br>Ambergris</p>
     </div>
   </div>
 </section>
 
-<section class="full-image" style="background-image: url('mood.jpg');">
-  <div class="overlay-text">
-    <p>
-      Warm air, citrus trees,<br>
-      and the quiet rhythm of summer.
-    </p>
-  </div>
-</section>
-
+<!-- 盒子展示 -->
 <section>
-  <img src="box.jpg" alt="Chloris box">
+  <img src="box.jpg" style="width:60%; max-width:600px;" alt="Chloris Box Design">
 </section>
 
-<section class="notes">
-  <img src="box1.jpg" alt="">
-  <img src="box2.jpg" alt="">
-  <img src="box3.jpg" alt="">
+<section class="split">
+  <img src="box1.jpg" style="width:30%;">
+  <img src="box2.jpg" style="width:30%;">
+  <img src="box3.jpg" style="width:30%;">
 </section>
 
+<!-- 结尾 -->
 <section>
   <footer>
     Chloris is not a place,<br>
