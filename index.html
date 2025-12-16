@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Landi·F — Chloris</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background-color: #f6f1e8;
+  color: #5a5957;
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+  padding: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover {
+  text-align: center;
+  flex-direction: column;
+}
+
+.cover h1 {
+  font-size: 68px;
+  letter-spacing: 0.15em;
+}
+
+.cover p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.full-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay-text {
+  background: rgba(246,241,232,0.85);
+  padding: 60px;
+  max-width: 420px;
+}
+
+.split {
+  display: flex;
+  gap: 80px;
+}
+
+.box-frame {
+  border: 1px solid #a3b59f;
+  padding: 80px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(163,181,159,0.25),
+      rgba(163,181,159,0.25) 2px,
+      transparent 2px,
+      transparent 18px
+    );
+  max-width: 520px;
+  text-align: center;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 900px;
+}
+
+.notes h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  text-align: center;
+  font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 封面 -->
+<section class="cover">
+  <h1>CHLORIS</h1>
+  <p>
+    Eau de Parfum<br>
+    Inspired by new green and summer air
+  </p>
+</section>
+
+<!-- 香水瓶主视觉（你刚才骂的那张） -->
+<section class="full-image" style="background-image:url('perfume.jpg');">
+  <div class="overlay-text">
+    <p>
+      On a quiet summer afternoon,<br>
+      warm wind passes through citrus trees<br>
+      and old stone houses.Inspired by Chloris, the nymph of new green in Greek mythology,
+this fragrance captures the moment when spring slowly becomes summer.
+
+Fresh lemon and bergamot recall the sunlight of southern Italy.
+Petitgrain and juniper evoke olive leaves and cool shadows.
+Soft florals and woods linger like skin warmed by the Mediterranean sun.
+
+Chloris is not a place,
+but the feeling of a summer that stays with you.
+    </p>
+  </div>
+</section>
+
+<!-- 香水盒 / 博物馆说明牌 -->
+<section>
+  <div class="box-frame">
+    <h2>PRODUCT DETAILS</h2>
+    <p>
+      Type · Eau de Parfum<br>
+      Concentration · 15%<br>
+      Volume · 20ml<br>
+      Gender · Unisex
+    </p>
+
+    <p style="margin-top:40px;">
+      Inspired by Chloris,<br>
+      the goddess of flowers in ancient Greek mythology.
+    </p>
+  </div>
+</section>
+
+<!-- 香调 -->
+<section>
+  <div class="notes">
+    <div>
+      <h3>Top</h3>
+      <p>Lemon<br>Bergamot<br>Petitgrain</p>
+    </div>
+    <div>
+      <h3>Middle</h3>
+      <p>Rosewood<br>Jasmine<br>Juniper Berry</p>
+    </div>
+    <div>
+      <h3>Base</h3>
+      <p>Damask Rose<br>Cool Woods<br>Musk<br>Ambergris</p>
+    </div>
+  </div>
+</section>
+
+<!-- 结尾 -->
+<section>
+  <footer>
+    Chloris is not a place,<br>
+    but the feeling of a summer that stays with you.
+  </footer>
+</section>
+
+</body>
+</html>
+<section class="full-image" style="background-image:url('mood.jpg');">
+  <div class="overlay-text">
+    <p>
+      Warm air, citrus trees,<br>
+      and the quiet rhythm of summer.Inspired by Chloris, the nymph of spring,
+and the slow, sun-drenched summers of the Mediterranean.
+    </p>
+  </div>
+</section>
+<section>
+  <img src="box.jpg" style="width:60%; max-width:600px;" alt="Chloris Box Design">
+</section>
+<section class="split">
+  <img src="box1.jpg" style="width:30%;">
+  <img src="box2.jpg" style="width:30%;">
+  <img src="box3.jpg" style="width:30%;">
+</section>Move index.html to root
